@@ -1,38 +1,581 @@
-.App {
-  text-align: center;
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1568738351265-c7065f5d4293?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bG9naW4lMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww");
+    background-size: cover;
+    background-position: center;
+    font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-container {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.login-container span {
+    font-size: 1rem;
+    font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form input[type="submit"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #ccc;
+}
+
+.login-form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #66afe9;
+    border-color: #66afe9;
+}
+
+
+.register-container {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.register-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.register-container span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.link-underline {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.register-form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #66afe9;
+    border-color: #66afe9;
+}
+
+.register-form button {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.register-form button:hover {
+    background-color: #ccc;
+}
+
+.register-form input[type="number"]::-webkit-inner-spin-button,
+.register-form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.panel-web-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.panel-web-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.panel-web-container h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.panel-web-user-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.panel-web-user-info-container h2 {
+    font-size: 1.3rem;
+    color: rgb(134, 119, 119);
+    text-decoration: underline;
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+}
+
+.panel-web-user-info-data {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.panel-web-user-info-data span {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+}
+
+.panel-web-rutinas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.panel-web-rutinas-container select {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 4 5%22%3E%3Cpath fill%3D%22%23333%22 d%3D%22M2 0L0 2h4L2 0zM0 3l2 2 2-2H0z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    cursor: pointer;
+}
+
+.panel-web-rutinas-container select:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: none;
+}
+
+.panel-web-rutinas-container select::-ms-expand {
+    display: none;
+}
+
+.panel-web-rutinas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.panel-web-rutinas-table th,
+.panel-web-rutinas-table td {
+    padding: 12px 15px;
+    border: 1px solid #675e5e;
+}
+
+.panel-web-rutinas-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.panel-web-no-rutinas {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: underline;
+    padding: 10px;
+    text-align: center;
+}
+
+.panel-web-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.panel-web-button-container button {
+    width: 100px;
+    padding: 13px 2px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #333;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.panel-web-button-container button:hover {
+    background-color: #ccc;
+}
+
+.panel-admin-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.panel-admin-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.panel-admin-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.panel-admin-field p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 2px;
+    text-align: center;
+}
+
+.panel-admin-field-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.panel-admin-field-buttons button {
+    width: 120px;
+    padding: 13px 2px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #333;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.panel-admin-field-buttons button:hover {
+    background-color: #ccc;
+}
+
+.fecha-update-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+}
+
+.panel-fecha-update {
+    display: flex;
+        flex-Direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: fixed;
+        top: 2%;
+        right: 7%;
+        z-index: 10;
+        color: black;
+        font-Weight: bold;
+        border: 1px solid black;
+        text-align: center;
+        padding: 25px;
+}
+
+.panel-fecha-update input[type="date"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #333;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.panel-fecha-update input[type="submit"]{
+    width: 100%;
+    max-width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #333;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-weight: bold;
+}       
+
+.panel-fecha-update input[type="submit"]:hover {
+    background-color: #ccc;
+}   
+
+.panel-fecha-update button:hover{
+    background: red;
+    cursor: pointer;
+}
+
+.tipo-plan-container-form{
+    display: flex;
+    flex-Direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: fixed;
+    top: 2%;
+    right: 7%;
+    z-index: 10;
+    color: black;
+    font-Weight: bold;
+    border: 1px solid black;
+    text-align: center;
+    padding: 25px;
+}
+
+.tipo-plan-container-form button:nth-child(2){
+    width: 100%;
+    max-width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #333;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}       
+
+.tipo-plan-container-form form select{
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #333;
+    background-color: #f9f9f9;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.tipo-plan-container-form h3{
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+
+.tipo-plan-container-form form select:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: none;
+}
+
+.tipo-plan-container-form button:nth-child(1){
+    cursor: pointer;
+}
+
+.tipo-plan-container-form button:nth-child(1):hover{
+    background: red;
+}
+
+
+.tipo-plan-container-form button:nth-child(2):hover {
+    background-color: #ccc;
+}   
+
+.panel-agregar-ejercicios-container{
+    display: flex;
+    flex-Direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 30vh;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.panel-agregar-ejercicios-container h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.panel-agregar-ejercicios-container form{
+    display: flex;
+    flex-Direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    text-align: center; 
+}
+
+.panel-agregar-ejercicios-container form input[type="text"]{
+    width: 70%;
+    height: 23px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: none;
+    text-align: center;
+}
+
+.panel-agregar-ejercicios-container form input[type="submit"]{
+    width: 100%;
+    max-width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #333;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.panel-agregar-ejercicios-container form input[type="submit"]:hover {
+    background-color: #ccc; 
+}
+
+.panel-agregar-ejercicios-container form select{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: none;
+    text-align: center; 
+}
+.panel-agregar-ejercicios-container select:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: none;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .panel-admin-field-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .panel-fecha-update{
+        right: 25%;
+        background-color: white;
+        opacity: 90%;
+    } 
+
+    .tipo-plan-container-form{
+        right: 25%;
+        background-color: white;
+        opacity: 95%;
+    }
+
+
+    
 }

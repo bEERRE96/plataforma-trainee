@@ -1,0 +1,5 @@
+export {Login} from './login/index'
+export {PanelWeb} from './panel-web/index'
+export {PanelAdmin} from './panel-admin/index'
+export {FormEjercicios} from './tabla-ejercicios/index'
+export {Register} from './register/index'
