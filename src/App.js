@@ -18,7 +18,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        {/*CAMBIAR LA PALABRA ADMIN POR ALGO MAS COMPLICADO YA QUE SE PUEDE MODIFICAR EN COMPONENTS DE LA CONSOLA DE GOOGLE */}
         <Route
           path="/panel-web"
           element={

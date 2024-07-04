@@ -38,7 +38,6 @@ const FormEjercicios = () => {
     if (data) {
       alert("Ejercicio agregado");
       agregarEjercicio.ejercicios = "";
-      
     }
   };
 
@@ -57,7 +56,12 @@ const FormEjercicios = () => {
       <h1>Agregar ejercicio</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="ejercicio">Ejercicio:</label>
-        <select name="ejercicios" id="ejercicios" onChange={handleChange} defaultValue={""}>
+        <select
+          name="ejercicios"
+          id="ejercicios"
+          onChange={handleChange}
+          defaultValue={""}
+        >
           <option value="" disabled selected>
             --Elija una opción--
           </option>
@@ -68,7 +72,12 @@ const FormEjercicios = () => {
           ))}
         </select>
         <label htmlFor="ejercicio">Dia:</label>
-        <select name="diasSemana" id="diasSemana" onChange={handleChange} defaultValue={""}>
+        <select
+          name="diasSemana"
+          id="diasSemana"
+          onChange={handleChange}
+          defaultValue={""}
+        >
           <option value="" disabled selected>
             --Elija una opción--
           </option>
@@ -88,7 +97,9 @@ const FormEjercicios = () => {
         />
         <input type="submit" value="Submit" />
       </form>
-      <Link to="/panel-web" className="link-underline">Volver</Link>
+      <Link to="/panel-web" className="link-underline">
+        Volver
+      </Link>
     </div>
   );
 };

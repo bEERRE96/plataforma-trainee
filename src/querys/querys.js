@@ -13,7 +13,6 @@ async function checkLogin(username, password) {
     });
 
     if (!response.ok) {
-      // Si la respuesta no es OK (status no en el rango 200-299)
       const errorData = await response.json();
       throw new Error(errorData.error || "Error desconocido");
     }
@@ -41,7 +40,6 @@ async function getRutinaPorUsuario(username, dia) {
     });
 
     if (!response.ok) {
-      // Si la respuesta no es OK (status no en el rango 200-299)
       const errorData = await response.json();
       throw new Error(errorData.error || "Error desconocido");
     }
@@ -67,7 +65,6 @@ async function estadoCuenta(username) {
       }),
     });
     if (!response.ok) {
-      // Si la respuesta no es OK (status no en el rango 200-299)
       const errorData = await response.json();
       throw new Error(errorData.error || "Error desconocido");
     }
@@ -93,7 +90,6 @@ async function logPanelAdmin(typeUse) {
     });
 
     if (!response.ok) {
-      // Si la respuesta no es OK (status no en el rango 200-299)
       const errorData = await response.json();
       throw new Error(errorData.error || "Error desconocido");
     }
@@ -119,7 +115,6 @@ async function desactivar(username) {
       }),
     });
     if (!response.ok) {
-      // Si la respuesta no es OK (status no en el rango 200-299)
       const errorData = await response.json();
       throw new Error(errorData.error || "Error desconocido");
     }
@@ -144,7 +139,6 @@ async function activar(username) {
       }),
     });
     if (!response.ok) {
-      // Si la respuesta no es OK (status no en el rango 200-299)
       const errorData = await response.json();
       throw new Error(errorData.error || "Error desconocido");
     }
@@ -173,7 +167,6 @@ async function renovarTiempo(username, fecha) {
       }),
     });
     if (!response.ok) {
-      // Si la respuesta no es OK (status no en el rango 200-299)
       const errorData = await response.json();
       throw new Error(errorData.error || "Error desconocido");
     }
