@@ -215,7 +215,7 @@ async function agregarRutina(username, dia, ejercicio) {
 
 async function getEjercicios() {
   try {
-    const response = await fetch("http://localhost:3000/listaEjercicios"); // CAMBIAR POR LA VARIABLE ENTORNO
+    const response = await fetch(process.env.REACT_APP_URL_GET_EJERCICIOS);
     if (!response.ok) {
       throw new Error("Error desconocido");
     }
@@ -230,7 +230,7 @@ async function getEjercicios() {
 
 async function getDias() {
   try {
-    const response = await fetch("http://localhost:3000/diasSemana"); // CAMBIAR POR LA VARIABLE ENTORNO
+    const response = await fetch(process.env.REACT_APP_URL_GET_DIAS_SEMANA);
     if (!response.ok) {
       throw new Error("Error desconocido");
     }
@@ -245,7 +245,7 @@ async function getDias() {
 
 async function getRegister(formRegister) {
   try {
-    const response = await fetch("http://localhost:3000/agregarCuentaNueva", {
+    const response = await fetch(process.env.REACT_APP_URL_GET_REGISTER, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -274,7 +274,7 @@ async function getRegister(formRegister) {
 
 async function eliminarCuenta(username) {
   try {
-    const response = await fetch("http://localhost:3000/borrarCuenta", {
+    const response = await fetch(process.env.REACT_APP_URL_DELETE_CUENTA, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
@@ -301,7 +301,7 @@ async function eliminarCuenta(username) {
 
 async function elegirPlan(username, plan) {
   try {
-    const response = await fetch("http://localhost:3000/elegirPlan", {
+    const response = await fetch(process.env.REACT_APP_URL_CHANGE_PLAN, {
       method: "PATCH",
       headers: {
         Accept: "application/json",

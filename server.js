@@ -141,6 +141,8 @@ app.post("/tiempoRestante", async (req, res) => {
   }
 });
 
+// LLAMADA PARA RENDERIZAR PANEL ADMIN
+
 app.post("/renderPanelAdmin", async (req, res) => {
   let { type_user } = req.body;
 
@@ -159,6 +161,8 @@ app.post("/renderPanelAdmin", async (req, res) => {
   }
 });
 
+// LLAMADA PARA DESACTIVAR CUENTA
+
 app.patch("/desactivarCuenta", async (req, res) => {
   let { username } = req.body;
 
@@ -174,6 +178,8 @@ app.patch("/desactivarCuenta", async (req, res) => {
   }
 });
 
+// LLAMADA PARA ACTIVAR CUENTA
+
 app.patch("/activarCuenta", async (req, res) => {
   let { username } = req.body;
 
@@ -188,6 +194,8 @@ app.patch("/activarCuenta", async (req, res) => {
       .json({ error: "Error al ejecutar la consulta: " + error.message });
   }
 });
+
+// LLAMADA PARA AGREGAR RUTINA EN CUENTA DE USUARIOS
 
 app.post("/agregarRutina", async (req, res) => {
   let { username, dia, ejercicio } = req.body;
@@ -213,6 +221,8 @@ app.post("/agregarRutina", async (req, res) => {
   }
 });
 
+// LLAMADA PARA MODIFICAR VENCIMIENTO PLAN
+
 app.post("/modificarVencimiento", async (req, res) => {
   let { username, fecha } = req.body;
 
@@ -235,6 +245,9 @@ app.post("/modificarVencimiento", async (req, res) => {
       .json({ error: "Error al ejecutar la consulta: " + error.message });
   }
 });
+
+// LLAMADA PARA AGREGAR CUENTA nueva
+
 app.post("/agregarCuentaNueva", async (req, res) => {
   let {
     username,
@@ -296,6 +309,9 @@ app.post("/agregarCuentaNueva", async (req, res) => {
   }
 });
 
+
+// LLAMADA PARA BORRAR CUENTA
+
 app.delete("/borrarCuenta", async (req, res) => {
   let { username } = req.body;
 
@@ -313,6 +329,8 @@ app.delete("/borrarCuenta", async (req, res) => {
       .json({ error: "Error al eliminar la cuenta, cuenta no encontrada" });
   }
 })
+
+// LLAMADA PARA ELEGIR PLAN ( de admin a uysuario)
 
 app.patch("/elegirPlan", async (req, res) => {
   let { username, plan } = req.body;
